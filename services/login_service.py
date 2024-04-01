@@ -17,7 +17,7 @@ def user_login(username: str, password: str, email: str, response: Response):
         "username": user.username,
         "email": user.email,
         "is_active": user.is_active,
-        "exp": int((datetime.now() + timedelta(minutes=2)).timestamp())
+        "exp": int((datetime.now() + timedelta(minutes=30)).timestamp())
     }
 
     # Create JWT token with expiration

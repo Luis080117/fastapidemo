@@ -3,8 +3,10 @@ from routers import movie
 from routers import user
 from routers import login
 from typing import Union
+from middlewares.error_handler import ErrorHandler
 
 app = FastAPI()
+app.add_middleware(ErrorHandler)
 
 @app.get("/")
 def read_root():
